@@ -1,4 +1,4 @@
-# graph-coloring-problem
+# Graph Coloring Problem
 Python script that solves a graph coloring problem using a backtracking approach
 
 Here's an overview of what the script does:
