@@ -1,29 +1,35 @@
-# Graph Coloring Problem
-Python script that solves a graph coloring problem using a backtracking approach
+# Graph Coloring Problem Solver
 
-![mapc](https://github.com/hajalex/Graph-Coloring-Problem/assets/112249748/212d756d-bfd2-47ba-80e7-39acdb094719)
+This Python script solves the graph coloring problem using a backtracking approach.
 
-----
-Here's an overview of what the script does:
+![Graph Coloring](https://github.com/hajalex/Graph-Coloring-Problem/assets/112249748/212d756d-bfd2-47ba-80e7-39acdb094719)
 
-# check_valid(graph):
-This function is responsible for checking whether the input graph is valid. It verifies that no node is linked to itself and that if node A is linked to node B, then node B must be linked back to node A.
+---
 
-# check_solution(graph, solution): 
-This function checks whether a given coloring solution is valid. It ensures that each node in the graph is present in the solution and that adjacent nodes have different colors.
+## Overview
 
-# find_best_candidate(graph, guesses):
-This function finds the best candidate node to be colored next. The candidate is selected based on the number of already guessed neighbors and the number of remaining neighbors. The idea is to prioritize nodes that are likely to have fewer valid color options.
+This script aims to solve the classic Graph Coloring Problem by employing a backtracking algorithm. The problem revolves around coloring the nodes of a graph in such a way that no two adjacent nodes share the same color. The script achieves this through a series of functions:
 
-# solve(graph, colors, guesses, depth):
-This is the main backtracking function that tries to find a valid coloring solution for the graph. It iterates through the possible colors for the current candidate node and recursively explores the solution space. If a valid solution is found, it returns the colored nodes; otherwise, it backtracks.
+- `check_valid(graph)`: This function ensures the validity of the input graph. It confirms that no node is connected to itself and guarantees that if node A is connected to node B, node B must be connected back to node A.
 
-# solve_problem(graph, colors):
-This function calls the above functions in sequence to solve the graph coloring problem. It first checks the validity of the input graph, then invokes the solve function to find a solution, and finally checks whether the solution is valid using check_solution.
+- `check_solution(graph, solution)`: This function validates a given coloring solution. It verifies that each node in the graph exists in the solution and that neighboring nodes have distinct colors.
 
---------
-The australia dictionary represents the graph of Australian territories, where each territory is associated with its neighboring territories.
+- `find_best_candidate(graph, guesses)`: This function identifies the optimal node to be colored next. The selection is based on the count of previously guessed neighbors and the count of remaining neighbors. The goal is to prioritize nodes with fewer color options.
 
-The colors list contains the available colors for coloring the nodes.
+- `solve(graph, colors, guesses, depth)`: The core backtracking function attempts to find a valid coloring solution for the graph. It iterates through possible colors for the current candidate node and explores the solution space recursively. If a valid solution is found, the function returns the colored nodes; otherwise, it backtracks.
 
-The script then calls solve_problem with the Australia graph and colors to find and print a valid solution. It also prints the number of function calls made during the solving process.
+- `solve_problem(graph, colors)`: This function orchestrates the solving process. It first validates the input graph, then employs the `solve` function to find a solution, and finally confirms the solution's validity using `check_solution`.
+
+---
+
+## Usage
+
+1. Adjust the `australia` dictionary to represent the graph of Australian territories, with each territory linked to its neighboring territories.
+
+2. Modify the `colors` list to contain the available colors for node coloring.
+
+3. Run the script, which invokes `solve_problem` with the Australia graph and colors to find and display a valid solution. The script also reports the number of function calls made during the solving process.
+
+---
+
+Feel free to explore and modify the script to solve different instances of the graph coloring problem!
