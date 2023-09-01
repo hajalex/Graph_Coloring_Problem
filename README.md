@@ -20,6 +20,8 @@ This script aims to solve the classic Graph Coloring Problem by employing a back
 
 - `solve_problem(graph, colors)`: This function orchestrates the solving process. It first validates the input graph, then employs the `solve` function to find a solution, and finally confirms the solution's validity using `check_solution`.
 
+![mapc](https://github.com/hajalex/Graph_Coloring_Problem/assets/112249748/a506a67b-64f5-4826-8049-0f140501fce2)
+
 ---
 
 ## Usage
